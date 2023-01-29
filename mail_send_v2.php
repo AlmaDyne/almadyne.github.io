@@ -3,7 +3,7 @@ if ((isset($_POST['name']) && $_POST['name'] != "") &&
    (isset($_POST['mail']) && $_POST['mail'] != "")) && 
    (isset($_POST['subject']) && $_POST['subject'] != "")) && 
    (isset($_POST['message']) && $_POST['message'] != "")) {
-	$to = 'almadyne.music@gmail.com';
+	$to = 'moto-magazine@mail.ru';
 	function clearing($str)
 	{
 		$str = strip_tags($str);
