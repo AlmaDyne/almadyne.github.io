@@ -253,7 +253,7 @@ aside {
     left: calc(50% - 90px/2);
     border-radius: 50%;
     background: radial-gradient(circle at center, #2d2c2c 18px, 
-        rgba(227, 222, 236, 0.95) 19px);
+        rgba(227, 222, 236, 0.98) 19px);
 }
 
 .FigCover figcaption {
