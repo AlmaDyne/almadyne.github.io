@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', function() {
+/*document.addEventListener('DOMContentLoaded', function() {
 	document.body.classList.add('ready');
-});
+});*/
 
-/*window.onload =  function() {
+window.onload =  function() {
 	document.body.classList.add('ready');
-};*/
+};
