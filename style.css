@@ -14,7 +14,7 @@ body {
     max-width: 1920px;
     min-width: 500px;
     min-height: 100%;
-    overflow: hidden overlay;
+    overflow-y: overlay;
 }
 
 h1 {
