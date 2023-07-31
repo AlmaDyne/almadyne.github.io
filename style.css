@@ -496,8 +496,8 @@ aside:hover, .MainArticle:hover, .Navigation a:hover, .RightImgCover:hover, .Aut
 }
 
 #ContactInfo:target {
-    background-color: rgba(207, 27, 162, 0.1);
-    border: 3px dotted rgb(207, 27, 162);
+    background-color: rgba(255, 0, 157, 0.1);
+    border: 3px dotted rgb(255, 0, 157);
     border-radius: 10px;
 }
 
