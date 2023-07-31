@@ -1,31 +1,45 @@
-let mailClick = document.querySelector('.ContactMail'),
+const mailClick = document.querySelector('.ContactMail'),
     copyMsg = document.querySelector('.CopyMessage'),
     mailContact = 'almadyne.music@gmail.com';
-var fTimer = dTimer = t1 = t2 = tD = null;
+let showTimer,
+    fadeOutTimer,
+    timeStart,
+    timeEnd,
+    timeCycleDiff = Date.now();
 
 mailClick.addEventListener('click', () => {
-    navigator.clipboard.writeText(mailContact) /* Команда копирования в буфер */
-    .then(() => {
-        clearTimeout(fTimer);
-        clearTimeout(dTimer);
-        t1 = Date.now();
-        console.log('Начало: ' + (t1 - Date.now()));
-        copyMsg.classList.remove('FadeOut');
-        copyMsg.innerHTML = 'E-mail скопирован, хо!';
-        copyMsg.style.display = 'inline-block';
-        copyMsg.classList.add('FadeIn');
-        fTimer = setTimeout(function() {
+    navigator.clipboard.writeText(mailContact) /* Копирование в буфер (возвращает промис) */
+        .then(() => {
+            timeStart = Date.now();
+            timeCycleDiff = timeStart - timeCycleDiff;
+            console.log('Прошло времени с последнего клика: ' + timeCycleDiff);
+            timeCycleDiff = timeStart;
+
+            clearTimeout(showTimer);
+            clearTimeout(fadeOutTimer);
             copyMsg.classList.remove('FadeIn');
-            copyMsg.classList.add('FadeOut');
-            dTimer = setTimeout(function() {
-                copyMsg.style.display = 'none';
-                t2 = Date.now();
-                tD = t2 - t1;
-                console.log('Разница: ' + tD);
-            }, 500);
-        }, 3000);
-    })
-    .catch(error => {
-        console.log('Something went wrong...', error);
-    });
+            copyMsg.classList.remove('FadeOut');
+            copyMsg.innerHTML = 'E-mail скопирован';
+            copyMsg.style.display = 'inline-block';
+
+            return new Promise(resolve => setTimeout(() => {
+                resolve(copyMsg.classList.add('FadeIn'))
+            }, 20)); // Задержка для срабатывания анимации класса FadeIn
+        })
+        .finally(() => {
+            showTimer = setTimeout(function() {
+                copyMsg.classList.remove('FadeIn');
+                copyMsg.classList.add('FadeOut');
+
+                fadeOutTimer = setTimeout(function() {
+                    copyMsg.style.display = 'none';
+
+                    timeEnd = Date.now() - timeStart;
+                    console.log('Длительность показа сообщения: ' + timeEnd);
+                }, 500);
+            }, 2000);
+        })
+        .catch(error => {
+            console.log('Something went wrong...\n', error);
+        });
 });

@@ -36,18 +36,7 @@
         </nav>
         <main>
             <aside>
-                <div class="Empty"></div>
-                <div class="AsideContainer">
-                    <img class="AsideImg" src="img/sideset/Synthesizer.png" alt="Synthesizer">
-                </div>
-                <div class="Empty HiddenMediaForm"></div>
-                <div class="AsideContainer HiddenMediaForm">
-                    <img class="AsideImg" src="img/sideset/Horn.png" alt="Horn">
-                </div>
-                <div class="Empty HiddenMediaLevel3"></div>
-                <div class="AsideContainer HiddenMediaLevel3">
-                    <img class="AsideImg" src="img/sideset/ElectricBass.png" alt="Electric Bass">
-                </div>
+                <div class="AsideContainer"></div> <!-- Элемент удаляется после получения его высоты. -->
             </aside>
             <article class="MainArticle">
                 <section class="CenterSection">
@@ -85,7 +74,7 @@
                     <p></p>
                     <p></p>
                     <p></p>
-                    <form id="MailFormObject" action="mail_send_v2.php" method="post">
+                    <form id="MailFormObject" action="mail_send_v1.php" method="post">
                         <table class="MailFormTable">
                             <col width="48%">
                             <col width="4%">
@@ -119,38 +108,21 @@
                             </tfoot>
                         </table>
                     </form>
-                    <div class="ArrowTopPageWrapper">
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                        <p>
-                            <a class="ArrowTopPageBig" href="javascript:scroll(0,0)"><img src="img/IconArrowUpBig.png" 
-                                alt="Arrow Up" title="Наверх"></a>
-                            <a class="ArrowTopPageSmall" href="javascript:scroll(0,0)"><img src="img/IconArrowUpSmall.png" 
-                                alt="Arrow Up" title="Наверх"></a>
-                        </p>
+                    <div class="ArrowTopPage Closed">
+                        <a class="ArrowTopPageBig" href="javascript:scroll(0,0)"><img src="img/IconArrowUpBig.png" 
+                            alt="Arrow Up" title="Наверх"></a>
+                        <a class="ArrowTopPageSmall" href="javascript:scroll(0,0)"><img src="img/IconArrowUpSmall.png" 
+                            alt="Arrow Up" title="Наверх"></a>
                     </div>
                 </section>
-                <section class="RightSection">
-                    <div class="Empty"></div>
-                    <div class="RightImgContainer">
-                        <img class="RightImg" src="img/sideset/Fiddle.png" alt="Fiddle">
-                    </div>
-                    <div class="Empty HiddenMediaForm"></div>
-                    <div class="RightImgContainer HiddenMediaForm">
-                        <img class="RightImg" src="img/sideset/Drums.png" alt="Drums">
-                    </div>
-                    <div class="Empty HiddenMediaLevel3"></div>
-                    <div class="RightImgContainer HiddenMediaLevel3">
-                        <img class="RightImg" src="img/sideset/Trumpet.png" alt="Trumpet">
-                    </div>
-                </section>
+                <section class="RightSection"></section>
             </article>
         </main>
         <footer>
-            <p>All rights reserved<br>@ <time datetime="2023">2023</time></p>
+            <p>All rights reserved<br>&#169; <time datetime="2023">2023</time></p>
         </footer>
         <script src="preload.js"></script>
+        <script src="random_img.js"></script>
         <script src="mail_copy.js"></script>
         <script src="mailform_open.js"></script>
     </body>

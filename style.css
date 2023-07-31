@@ -1,6 +1,6 @@
 html {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     filter: sepia(3%);
 }
 
@@ -21,7 +21,7 @@ body {
 .Preloader {
     position: fixed;
     left: 0; right: 0; top: 0; bottom: 0;
-    background: linear-gradient(135deg, #fff9d6, #00ccff);
+    background: linear-gradient(135deg, #ffc3fc, #38d7ff);
     z-index: 100;
 }
 
@@ -67,7 +67,7 @@ h1 {
     margin: 0;
     padding: 5px;
     font-family: Georgia;
-    font-size: 82pt;
+    font-size: 74pt;
     font-weight: 400;
 }
 
@@ -80,7 +80,7 @@ header::before { /* Для изменений только фона */
     content: '';
     position: absolute;
     left: 0; right: 0; top: 0; bottom: 0;
-    height: 200px;
+    height: 180px;
     z-index: -3;
     background: linear-gradient(135deg, rgba(254, 239, 255, 0.9),
     rgba(9, 202, 228, 0.3)), url("img/HeaderImage.png") no-repeat;
@@ -100,7 +100,8 @@ header {
 
 .MainHeader {
     position: relative;
-    width: 590px;
+    width: 475px;
+    text-shadow: 0 0 12px #ffd7a2;
 }
 
 .MainHeader a {
@@ -111,7 +112,7 @@ header {
 .MainHeader p {
     margin: 0;
     padding-bottom: 18px;
-    font-size: 32pt;
+    font-size: 26pt;
     font-style: italic;
 }
 
@@ -122,7 +123,7 @@ header {
 .HeaderEmblem1 {
     position: absolute;
     left: 0; right: 0; top: 0; bottom: 0;
-    height: 200px;
+    height: 180px;
     z-index: -2;
     background: linear-gradient(135deg, rgba(254, 239, 255, 0.9),
     rgba(9, 202, 228, 0.3)), url("img/HeaderImage.png") no-repeat;
@@ -130,8 +131,8 @@ header {
     background-blend-mode: screen;
     border-bottom: 1px solid #7c81e2;
     box-sizing: border-box;
-    clip-path: circle(0 at calc(100vw - 115px) 100px);
-    transform-origin: calc(100vw - 115px) 100px 0;
+    clip-path: circle(0 at calc(100vw - 115px) 90px);
+    transform-origin: calc(100vw - 115px) 90px 0;
     filter: blur(1px) brightness(1) saturate(1);
     
 }
@@ -139,7 +140,7 @@ header {
 .HeaderEmblem2 {
     position: absolute;
     left: 0; right: 0; top: 0; bottom: 0;
-    height: 200px;
+    height: 180px;
     z-index: -1;
     background: linear-gradient(135deg, rgba(254, 239, 255, 0.9),
     rgba(9, 202, 228, 0.3)), url("img/HeaderImage.png") no-repeat;
@@ -147,8 +148,8 @@ header {
     background-blend-mode: screen;
     border-bottom: 1px solid #7c81e2;
     box-sizing: border-box;
-    clip-path: circle(0 at calc(100vw - 115px) 100px);
-    transform-origin: calc(100vw - 115px) 100px 0;
+    clip-path: circle(0 at calc(100vw - 115px) 90px);
+    transform-origin: calc(100vw - 115px) 90px 0;
     filter: blur(3px) brightness(1.1) saturate(1.1);
 }
 
@@ -167,8 +168,7 @@ nav::before { /* Для изменений только фона */
     position: absolute;
     left: 0; right: 0; top: 0; bottom: 0;
     z-index: -1;
-    background: url("img/TextureTVLines.png") no-repeat, 
-        rgba(76, 128, 224, 0.75);
+    background: url("img/TextureSandMonochrome.jpg"), linear-gradient(10deg, #cc7fff, #fff6df, #cc7fff);
     background-blend-mode: soft-light;
 }
 
@@ -196,14 +196,19 @@ nav {
     padding: 6px 0;
     width: 17%;
     min-width: 93px;
-    height: 1em;
+    line-height: 1em;
     text-align: center;
+    align-items: middle;
     text-decoration: none;
     font-weight: bold;
-    color: #682c59;
-    text-shadow: 0 0 10px rgba(255, 0, 150, 0.3);
-    background: linear-gradient(10deg, #00ffc8, rgba(255, 251, 0, 0.9));
+    color: #7e0077;
+    text-shadow: 0 0 10px rgba(184, 22, 116, 0.3);
+    background: linear-gradient(to bottom, #8a3cca 0%, #ffcb6a 35%, #ffda60 50%, #ffcb6a 65%, #cf3eab 100%);
     border-radius: 10px;
+}
+
+.Navigation > a:active {
+    filter: brightness(120%) contrast(90%);
 }
 
 .Navigation > a:first-child {
@@ -212,10 +217,6 @@ nav {
 
 .Navigation > a:last-child {
     border-radius: 0 10px 0 10px;
-}
-
-.Navigation > a:active {
-    background: linear-gradient(10deg, #00e7b5,#e9e500b9);
 }
 
 main {
@@ -229,7 +230,7 @@ aside::before { /* Для изменений только фона */
     position: absolute;
     left: 0; right: 0; top: 0; bottom: 0;
     z-index: -1;
-    background: url("img/TextureTVLines.png") repeat-y, #dfa935;
+    background: url("img/TextureSandMonochrome.jpg") repeat-y, #5c0008;
     background-blend-mode: soft-light;
     border-radius: 20px;
     filter: opacity(75%);
@@ -244,26 +245,48 @@ aside {
 
 .RightSection {
     width: 38%;
-    background: linear-gradient(90deg, rgba(163, 58, 137, 0), 
-        rgba(73, 167, 255, 0.75));
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(18, 89, 170, 0.75));
     border-radius: 0 20px 20px 0;
+}
+
+aside, .RightSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.MusicPageImgSide {
+    display: block; /* Заменяет "display: flex" от селектора "aside, .RightSection" */
 }
 
 .AsideContainer, .RightImgContainer {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 500px;
+    height: 500px;
+    margin: 30px auto;
 }
 
 .RightImgContainer {
-    margin: auto;
     width: 70%;
+}
+
+.MusicPageImgContainer {
+    margin: 0 auto;
+}
+
+.MusicPageImgContainer:first-child {
+    margin-top: 30px;
+}
+
+.AligningBlock {
+    height: 70px; /* Равно высоте TextOrnament */
 }
 
 .AsideImg, .RightImg, .FigCover img, .RightImgCover {
     max-width: 100%;
-    height: 100%;
+    max-height: 100%;
 }
 
 .AsideImg, .RightImg {
@@ -282,12 +305,11 @@ aside {
     text-shadow: 2px 2px 3px rgba(56, 64, 66, 0.5);
 }
 
-.DiskCoverWrapper {
+.FigCover .DiskCoverContainer {
     position: relative;
-    height: 100%;
-    width: 100%;
     border-radius: 50%;
     filter: saturate(0.75);
+    border: 1px solid;
 }
 
 .FigCover img {
@@ -297,7 +319,7 @@ aside {
     border-radius: 50%;
 }
 
-.DoubleCircle {
+.FigCover .DoubleCircle {
     position: absolute;
     width: 90px; height: 90px;
     top: calc(50% - 90px/2);
@@ -321,16 +343,16 @@ aside {
     transition: 0.25s;
 }
 
-.DiskCoverWrapper:hover, .FigCover figcaption:hover {
-    box-shadow: 0 0 20px rgba(255, 247, 134, 0.733);
+.FigCover .DiskCoverContainer:hover, .FigCover figcaption:hover {
+    box-shadow: 0 0 20px rgba(255, 230, 119, 0.733);
 }
 
 aside, .MainArticle, .RightImgCover, .Navigation a, .FigCover {
     transition: transform 0.1s;
 }
 
-aside:hover, .MainArticle:hover, .Navigation a:hover, .RightImgCover:hover {
-    box-shadow: 0 0 20px rgba(255, 247, 134, 0.733);
+aside:hover, .MainArticle:hover, .Navigation a:hover, .RightImgCover:hover, .AuthorPhoto:hover {
+    box-shadow: 0 0 20px rgba(255, 230, 119, 0.733);
     transform: scale(1.01);
     transition: transform 0.25s;
 }
@@ -340,7 +362,7 @@ aside:hover, .MainArticle:hover, .Navigation a:hover, .RightImgCover:hover {
     position: absolute;
     left: 0; right: 0; top: 0; bottom: 0;
     z-index: -1;
-    background: url("img/TextureTVLines.png") repeat-y, #b660a0;
+    background: url("img/TextureSandMonochrome.jpg") repeat-y, #af9fb6;
     background-blend-mode: soft-light;
     border-radius: 20px;
     filter: opacity(75%);
@@ -382,23 +404,25 @@ aside:hover, .MainArticle:hover, .Navigation a:hover, .RightImgCover:hover {
 }
 
 .ImgTextOrnament {
-    margin: 20px auto 10px;
     width: 18%;
     min-width: 72px;
 }
 
-.ImgTextOrnamentMusic {
-    width: 18%;
-    min-width: 72px;
+.TextOrnament {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
 }
 
-.TopSideImg {
-    margin-top: 30px;
+.LowLine {
+    border-bottom: 3px ridge rgba(119, 91, 49, 0.5);
+    box-sizing: border-box;
 }
 
 .MusicAlbum {
     position: relative;
-    padding-top: 22px;
+    padding-top: 24px;
 }
 
 .MusicAlbum .AnchorMA { /* Якори муз. альбомов, положение зависит от высоты nav */
@@ -418,7 +442,7 @@ aside:hover, .MainArticle:hover, .Navigation a:hover, .RightImgCover:hover {
 }
 
 .MusicAlbum iframe {
-    margin-bottom: -4px;
+    margin-bottom: -6px;
     width: 75%;
     height: 472px;
     border: 2px solid #7a137a;
@@ -443,7 +467,7 @@ aside:hover, .MainArticle:hover, .Navigation a:hover, .RightImgCover:hover {
 
 .TimeNews {
     color:#000980;
-    background-color: rgb(201, 122, 58);
+    background-color: #df8938;
     padding: 2px;
     margin-top: 3px;
     margin-left: -5%;
@@ -471,8 +495,8 @@ aside:hover, .MainArticle:hover, .Navigation a:hover, .RightImgCover:hover {
 }
 
 #ContactInfo:target {
-    background-color: rgba(255, 145, 0, 0.2);
-    border: 3px dotted rgb(223, 15, 67);
+    background-color: rgba(207, 27, 162, 0.1);
+    border: 3px dotted rgb(207, 27, 162);
     border-radius: 10px;
 }
 
@@ -488,6 +512,7 @@ aside:hover, .MainArticle:hover, .Navigation a:hover, .RightImgCover:hover {
     position: absolute;
     min-width: 130px;
     color: #00ad34;
+    opacity: 0;
 }
 
 .ContactMail:hover {
@@ -497,7 +522,7 @@ aside:hover, .MainArticle:hover, .Navigation a:hover, .RightImgCover:hover {
 .FormTrigger {
     text-decoration: none;
     font-size: 17pt;
-    color: rgb(98, 0, 255);
+    color: #2f00ff;
 }
 
 #MailFormAnchor {
@@ -505,11 +530,11 @@ aside:hover, .MainArticle:hover, .Navigation a:hover, .RightImgCover:hover {
     top: -80px; /* Зависит от высоты nav */
 }
 
-#MailFormObject, .ArrowTopPageWrapper {
+#MailFormObject, .ArrowTopPage.Closed {
     display: none;
 }
 
-#MailFormObject.Open, .ArrowTopPageWrapper.Open {
+#MailFormObject.Open, .ArrowTopPage.Open {
     display: block;
     animation-name: FadeIn;
     animation-fill-mode: both;
@@ -563,7 +588,7 @@ aside:hover, .MainArticle:hover, .Navigation a:hover, .RightImgCover:hover {
 	width: 110px;
 	height: 30px;
 	font: 16px 'Trebuchet MS';
-	padding: 0 0 2px;
+	padding: 0;
 	outline: none;
 	position: relative;
 	cursor: pointer;
@@ -679,6 +704,9 @@ li ~ li {
     background-color: #e0863b;
 }
 
+.ArrowTopPage {
+    padding-top: 36px;
+}
 .ArrowTopPageBig {
     display: inline-block;
     height: 50px; width: 50px;
@@ -740,6 +768,16 @@ footer p {
     animation-duration: 500ms;
 }
 
+@keyframes FadeIn {
+    from { opacity: 0 }
+    to { opacity: 1 }
+}
+
+@keyframes FadeOut {
+    from { opacity: 1 }
+    to { opacity: 0 }
+}
+
 @keyframes PreloadBoxRotate {
     0%, 100% {
         transform: rotate(0deg);
@@ -756,16 +794,6 @@ footer p {
     50% {
         transform: scale(1);
     }
-}
-
-@keyframes FadeIn {
-    from { opacity: 0 }
-    to { opacity: 1 }
-}
-
-@keyframes FadeOut {
-    from { opacity: 1 }
-    to { opacity: 0 }
 }
 
 @keyframes HeaderTitleAnimation {
@@ -793,37 +821,37 @@ footer p {
 
 @keyframes HeaderEmblem1Animation_BigScreen {
     0% {
-        clip-path: circle(0 at calc(100vw - 115px) 100px);
+        clip-path: circle(0 at calc(100vw - 115px) 90px);
         filter: blur(1px) brightness(1) saturate(1);
     }
     25% {
         filter: blur(5px) brightness(1.1) saturate(1.1);
     }
     50% {
-        clip-path: circle(75px at calc(100vw - 115px) 100px);
+        clip-path: circle(75px at calc(100vw - 115px) 90px);
         filter: blur(2px) brightness(1) saturate(1.05);
     }
     100% {
-        clip-path: circle(75px at calc(100vw - 115px) 100px);
+        clip-path: circle(75px at calc(100vw - 115px) 90px);
         filter: blur(1px) brightness(1) saturate(1);
     }
 }
 
 @keyframes HeaderEmblem2Animation_BigScreen {
     0% {
-        clip-path: circle(0 at calc(100vw - 115px) 100px);
+        clip-path: circle(0 at calc(100vw - 115px) 90px);
         filter: blur(4px) brightness(1.1) saturate(1.1);
     }
     10% {
-        clip-path: circle(0 at calc(100vw - 115px) 100px);
+        clip-path: circle(0 at calc(100vw - 115px) 90px);
         filter: blur(4px) brightness(1.1) saturate(1.1);
     }
     50% {
-        clip-path: circle(75px at calc(100vw - 115px) 100px);
+        clip-path: circle(75px at calc(100vw - 115px) 90px);
         filter: blur(2px) brightness(1) saturate(1.05);
     }
     100% {
-        clip-path: circle(75px at calc(100vw - 115px) 100px);
+        clip-path: circle(75px at calc(100vw - 115px) 90px);
         filter: blur(1px) brightness(1) saturate(1);
     }
 }
@@ -865,30 +893,10 @@ footer p {
     }
 }
 
-.Empty {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 75px;
-}
-
-.LowLine {
-    border-bottom: 3px ridge rgba(119, 91, 49, 0.5);
-    box-sizing: border-box;
-}
-
-.HiddenMediaLevel1, .HiddenMediaLevel2, .HiddenMediaLevel3, 
-.HiddenMediaForm {
-    display: none;
-}
-
 @media screen and (max-width: 1400px) {
     .TimeNews {
         font-size: 12pt;
         margin-top: 7px;
-    }
-    .HiddenMediaLevel1 {
-        display: flex;
     }
 }
 
@@ -948,13 +956,13 @@ footer p {
         top: -60px;
     }
     .MusicAlbum iframe {
-        margin-bottom: -3px;
+        margin-bottom: -5px;
     }
     .MusicAlbum .PlayArrow {
         left: -60px;
         font-size: 92pt;
     }
-    .DoubleCircle {
+    .FigCover .DoubleCircle {
         width: 60px; height: 60px;
         top: calc(50% - 60px/2);
         left: calc(50% - 60px/2);
@@ -1031,9 +1039,6 @@ footer p {
 }
 
 @media screen and (max-width: 850px) {
-    .HiddenMediaLevel2 {
-        display: flex;
-    }
     .MusicAlbum .PlayArrow {
         left: -40px;
         font-size: 60pt;
@@ -1041,10 +1046,7 @@ footer p {
 }
 
 @media screen and (max-width: 700px) {
-    .HiddenMediaLevel3 {
-        display: flex;
-    }
-    .DoubleCircle {
+    .FigCover .DoubleCircle {
         width: 40px; height: 40px;
         top: calc(50% - 40px/2);
         left: calc(50% - 40px/2);

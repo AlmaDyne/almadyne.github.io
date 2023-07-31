@@ -3,11 +3,11 @@ var hTimer = null,
     fTimer = null;
 
 for (let i = 1; i <= n; i++) {
-    let LinkToAnchorMA = document.querySelector('.LinkToAnchorMA' + i),
+    let linkToAnchorMA = document.querySelector('.LinkToAnchorMA' + i),
         PlayMA = document.querySelector('.PlayMA' + i);
 //        Player = document.querySelector('.PlayerAlbum' + i);
 
-    LinkToAnchorMA.addEventListener('click', () => {
+    linkToAnchorMA.addEventListener('click', () => {
         clearTimeout(fTimer);
         clearTimeout(hTimer);
         PlayMA.classList.remove('FadeOut');
