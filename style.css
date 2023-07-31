@@ -2,6 +2,7 @@ html {
     width: 100%;
     height: 100%;
     filter: sepia(3%);
+    scroll-behavior: smooth;
 }
 
 body {
@@ -173,7 +174,7 @@ nav::before { /* Для изменений только фона */
 }
 
 nav {
-    height: 80px;
+    height: 70px;
     margin: 25px 0;
     position: sticky;
     top: 0;
@@ -427,7 +428,7 @@ aside:hover, .MainArticle:hover, .Navigation a:hover, .RightImgCover:hover, .Aut
 
 .MusicAlbum .AnchorMA { /* Якори муз. альбомов, положение зависит от высоты nav */
     position: absolute;
-    top: -80px;
+    top: -70px;
 }
 
 .MusicAlbum .PlayArrow {
@@ -527,7 +528,7 @@ aside:hover, .MainArticle:hover, .Navigation a:hover, .RightImgCover:hover, .Aut
 
 #MailFormAnchor {
     position: relative;
-    top: -80px; /* Зависит от высоты nav */
+    top: -70px; /* Зависит от высоты nav */
 }
 
 #MailFormObject, .ArrowTopPage.Closed {
@@ -858,37 +859,37 @@ footer p {
 
 @keyframes HeaderEmblem1Animation_SmallScreen {
     0% {
-        clip-path: circle(0 at calc(100vw - 87px) 72px);
+        clip-path: circle(0 at calc(100vw - 87px) calc(124px / 2)); /* Зависит от высоты header::before */
         filter: blur(1px) brightness(1) saturate(1);
     }
     25% {
         filter: blur(4px) brightness(1.1) saturate(1.2);
     }
     50% {
-        clip-path: circle(47px at calc(100vw - 87px) 72px);
+        clip-path: circle(47px at calc(100vw - 87px) calc(124px / 2)); /* Зависит от высоты header::before */
         filter: blur(2px) brightness(1) saturate(1.05);
     }
     100% {
-        clip-path: circle(47px at calc(100vw - 87px) 72px);
+        clip-path: circle(47px at calc(100vw - 87px) calc(124px / 2)); /* Зависит от высоты header::before */
         filter: blur(1px) brightness(1) saturate(1);
     }
 }
 
 @keyframes HeaderEmblem2Animation_SmallScreen {
     0% {
-        clip-path: circle(0 at calc(100vw - 87px) 72px);
+        clip-path: circle(0 at calc(100vw - 87px) calc(124px / 2)); /* Зависит от высоты header::before */
         filter: blur(4px) brightness(1.1) saturate(1.2);
     }
     10% {
-        clip-path: circle(0 at calc(100vw - 87px) 72px);
+        clip-path: circle(0 at calc(100vw - 87px) calc(124px / 2)); /* Зависит от высоты header::before */
         filter: blur(4px) brightness(1.1) saturate(1.2);
     }
     50% {
-        clip-path: circle(47px at calc(100vw - 87px) 72px);
+        clip-path: circle(47px at calc(100vw - 87px) calc(124px / 2)); /* Зависит от высоты header::before */
         filter: blur(2px) brightness(1) saturate(1.05);
     }
     100% {
-        clip-path: circle(47px at calc(100vw - 87px) 72px);
+        clip-path: circle(47px at calc(100vw - 87px) calc(124px / 2)); /* Зависит от высоты header::before */
         filter: blur(1px) brightness(1) saturate(1);
     }
 }
@@ -902,25 +903,26 @@ footer p {
 
 @media screen and (max-width: 1120px) {
     header::before, .HeaderEmblem1, .HeaderEmblem2 {
-        height: 144px;
+        height: 124px;
     }
     h1 {
-        font-size: 56pt;
+        font-size: 46pt;
     }
     .MainHeader p {
-        font-size: 22pt;
+        font-size: 20pt;
+        padding-bottom: 14px;
     }
     .MainHeader {
         left: -10px;
-        width: 402px;
+        width: 366px;
     }
     .HeaderEmblem1 {
-        clip-path: circle(0 at calc(100vw - 87px) 72px);
-        transform-origin: calc(100vw - 87px) 72px 0;
+        clip-path: circle(0 at calc(100vw - 87px) calc(124px / 2)); /* Зависит от высоты header::before */
+        transform-origin: calc(100vw - 87px) calc(124px / 2) 0; /* Зависит от высоты header::before */
     }
     .HeaderEmblem2 {
-        clip-path: circle(0 at calc(100vw - 87px) 72px);
-        transform-origin: calc(100vw - 87px) 72px 0;
+        clip-path: circle(0 at calc(100vw - 87px) calc(124px / 2)); /* Зависит от высоты header::before */
+        transform-origin: calc(100vw - 87px) calc(124px / 2) 0; /* Зависит от высоты header::before */
     }
     .ready .HeaderEmblem1 {
         animation: HeaderEmblem1Animation_SmallScreen 3s linear infinite;
@@ -932,7 +934,7 @@ footer p {
         animation-delay: 2.5s;
     }
     nav {
-        height: 60px;
+        height: 50px;
         margin: 15px 0;
     }
     aside {
@@ -953,7 +955,7 @@ footer p {
         font-size: 13pt;
     }
     .MusicAlbum .AnchorMA { /* Якори муз. альбомов, положение зависит от высоты nav */
-        top: -60px;
+        top: -50px;
     }
     .MusicAlbum iframe {
         margin-bottom: -5px;
@@ -973,7 +975,7 @@ footer p {
         width: 100%;
     }
     #MailFormAnchor {
-        top: -60px; /* Зависит от высоты nav */
+        top: -50px; /* Зависит от высоты nav */
     }
     .MainArticle, #ContactInfo p, .FormTrigger {
         font-size: 15pt;
