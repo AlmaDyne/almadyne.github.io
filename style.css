@@ -16,7 +16,6 @@ body {
     max-width: 1920px;
     min-width: 500px;
     min-height: 100%;
-    overflow-y: overlay;
 }
 
 .Preloader {
@@ -266,7 +265,7 @@ aside, .RightSection {
     justify-content: center;
     align-items: center;
     height: 500px;
-    margin: 30px auto;
+    padding: 30px 0;
 }
 
 .RightImgContainer {
@@ -275,6 +274,7 @@ aside, .RightSection {
 
 .MusicPageImgContainer {
     margin: 0 auto;
+    padding: 0;
 }
 
 .MusicPageImgContainer:first-child {

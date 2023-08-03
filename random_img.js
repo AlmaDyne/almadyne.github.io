@@ -32,10 +32,8 @@ function imgArrangement(imgSideSet) {
 
     const imgSideL = document.getElementsByTagName('aside')[0];
     const imgSideR = document.querySelector('.RightSection');
-    const mainHeight = parseFloat(getComputedStyle(document.querySelector('.MainArticle')).height);
-    const imgContainer = getComputedStyle(document.querySelector('.AsideContainer'));
-    const imgContainerHeight = parseInt(imgContainer.height) + parseInt(imgContainer.marginTop) +
-        parseInt(imgContainer.marginBottom);
+    const mainHeight = document.querySelector('.MainArticle').clientHeight;
+    const imgContainerHeight = document.querySelector('.AsideContainer').clientHeight;
     let imgQuantity = Math.floor(mainHeight / imgContainerHeight) * 2;
 
     console.log('\nВысота контейнера картинки с отступами: ' + imgContainerHeight);
