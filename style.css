@@ -102,6 +102,7 @@ header {
     position: relative;
     width: 475px;
     text-shadow: 0 0 12px #ffd7a2;
+    user-select: none;
 }
 
 .MainHeader a {
@@ -111,7 +112,7 @@ header {
 
 .MainHeader p {
     margin: 0;
-    padding-bottom: 18px;
+    padding-bottom: 19px;
     font-size: 26pt;
     font-style: italic;
 }
@@ -205,6 +206,7 @@ nav {
     text-shadow: 0 0 10px rgba(184, 22, 116, 0.3);
     background: linear-gradient(to bottom, #8a3cca 0%, #ffcb6a 35%, #ffda60 50%, #ffcb6a 65%, #cf3eab 100%);
     border-radius: 10px;
+    user-select: none;
 }
 
 .Navigation > a:active {
@@ -392,14 +394,17 @@ aside:hover, .MainArticle:hover, .Navigation a:hover, .RightImgCover:hover, .Aut
     text-shadow: 2px 2px 3px rgba(56, 64, 66, 0.5);
 }
 
-.CenterSection p, .CenterSection span {
+.CenterSection p {
     margin: 0;
     padding: 5px;
+    line-height: 1.12em;
 }
 
 .CenterSection span {
+    margin: 0;
     padding: 0;
     font-size: 10pt;
+    line-height: 0;
     color: #666666;
     text-shadow: 2px 2px 3px rgba(221, 173, 14, 0.5);
 }
@@ -440,6 +445,7 @@ aside:hover, .MainArticle:hover, .Navigation a:hover, .RightImgCover:hover, .Aut
     color: #00ad34;
     text-shadow: 2px 2px 3px rgba(56, 64, 66, 0.3);
     visibility: hidden;
+    user-select: none;
 }
 
 .MusicAlbum iframe {
@@ -467,13 +473,14 @@ aside:hover, .MainArticle:hover, .Navigation a:hover, .RightImgCover:hover, .Aut
 }
 
 .TimeNews {
-    color:#000980;
-    background-color: #df8938;
-    padding: 2px;
     margin-top: 3px;
     margin-left: -5%;
+    padding: 2px;
     border-radius: 6px;
     float: left;
+    color:#000980;
+    background-color: #df8938;
+    cursor: pointer;
 }
 
 .AuthorPhoto {
@@ -560,12 +567,12 @@ aside:hover, .MainArticle:hover, .Navigation a:hover, .RightImgCover:hover, .Aut
 }
 
 .TextField1, .TextField2, .TextField3, .TextField4 {
-    box-sizing: border-box;
     font-size: 11pt;
     width: 100%;
     padding: 5px;
     border: 1px solid #560e86;
     border-radius: 3px;
+    box-sizing: border-box;
 }
 
 .TextField4 {
@@ -734,7 +741,7 @@ footer::before { /* Для изменений только фона */
     z-index: -1;
     background:
         url(img/FooterBackground.jpg) no-repeat,
-/*        url("img/TextureTVLines.png") no-repeat,
+/*        url("img/TextureSandMonochrome.png") no-repeat,
         linear-gradient(3deg, #746c52, #4e432a), */
         #6e643e;
     background-size: 100% 400%, auto, auto;
@@ -750,8 +757,7 @@ footer {
 }
 
 footer p {
-    margin: 0;
-    padding: 8px;
+    margin-top: 8px;
     text-align: center;
     font-size: 12pt;
     line-height: 1.25em;
